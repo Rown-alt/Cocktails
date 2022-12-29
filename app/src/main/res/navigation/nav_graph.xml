@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_drinkByFilterFragment"
+            app:destination="@id/drinkByFilterFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -24,5 +27,17 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinkByFilterFragment"
+        android:name="com.example.cocktails.DrinkByFilterFragment"
+        android:label="fragment_drink_by_filter"
+        tools:layout="@layout/fragment_drink_by_filter" >
+        <action
+            android:id="@+id/action_drinkByFilterFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <argument
+            android:name="filter_name"
+            app:argType="string" />
     </fragment>
 </navigation>
