@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.cocktails.SecondFragment"
+        android:name="com.example.cocktails.fragments.RandomDrinkFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -33,11 +33,19 @@
         android:name="com.example.cocktails.DrinkByFilterFragment"
         android:label="fragment_drink_by_filter"
         tools:layout="@layout/fragment_drink_by_filter" >
-        <action
-            android:id="@+id/action_drinkByFilterFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
         <argument
             android:name="filter_name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_drinkByFilterFragment_to_drinkDetails"
+            app:destination="@id/drinkDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinkDetails"
+        android:name="com.example.cocktails.fragments.DrinkDetails"
+        android:label="DrinkDetails" >
+        <argument
+            android:name="drink_id"
+            app:argType="integer" />
     </fragment>
 </navigation>

@@ -10,4 +10,6 @@ interface CocktailsAPI {
     suspend fun getRandom(): Result<RandomDrinkResponse>
     @GET("filter.php")
     suspend fun getDrinkByFilter(@Query("i") filter: String): Result<DrinksByFilterResponse>
+    @GET("lookup.php")
+    suspend fun getDrink(@Query("i") id: Int): Result<RandomDrinkResponse>
 }

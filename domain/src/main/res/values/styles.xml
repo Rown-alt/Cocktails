@@ -2,7 +2,7 @@
 <resources>
     <style name="StaffTitle">
         <item name="android:fontFamily">sans-serif-black</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">#FFF4DA</item>
         <item name="android:textSize">23sp</item>
         <item name="android:textStyle">bold</item>
     </style>

@@ -3,8 +3,10 @@ package com.example.cocktails.adapter
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.cocktails.FirstFragmentDirections
 import com.example.cocktails.databinding.FilterAlcoholBinding
 import com.example.cocktails.models.Filter
 
@@ -27,6 +29,11 @@ class FilterAdapter: RecyclerView.Adapter<FilterAdapter.FilterViewHolder>() {
 
     override fun onBindViewHolder(holder: FilterViewHolder, position: Int) {
         holder.bind(filters[position])
+
+        holder.itemView.setOnClickListener {
+            val action = FirstFragmentDirections.actionFirstFragmentToDrinkByFilterFragment(filters[position].name)
+            it.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -39,6 +46,7 @@ class FilterAdapter: RecyclerView.Adapter<FilterAdapter.FilterViewHolder>() {
         filters.add(Filter("Vodka", "https://wine-shopper.ru/image/cache/catalog/224753%201-600x600.jpg"))
         filters.add(Filter("Gin", "https://veld21.ru/image/cache/catalog/product/2812-100X6-470x610.jpg"))
         filters.add(Filter("Whisky", "https://wine-shopper.ru/image/cache/catalog/jopa/23-600x600.jpg"))
+        filters.add(Filter("Rum", "https://dydza6t6xitx6.cloudfront.net/ci-captain-morgan-original-spiced-rum-50b42d45bcd74a31.jpeg"))
         notifyDataSetChanged()
     }
 }

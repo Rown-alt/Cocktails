@@ -12,4 +12,8 @@ class RepositoryImpl(private val api: CocktailsAPI): Repository {
     override suspend fun getDrinkByFilter(filter: String): Result<DrinksByFilterResponse> {
         return api.getDrinkByFilter(filter)
     }
+
+    override suspend fun getDrink(id: Int): Result<RandomDrinkResponse> {
+        return api.getDrink(id)
+    }
 }

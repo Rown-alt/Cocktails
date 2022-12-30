@@ -9,17 +9,30 @@ import com.example.domain.api.repository.Repository
 import kotlinx.coroutines.launch
 
 class CocktailDetailsViewModel(private val repository: Repository): ViewModel() {
-    var randomDrink = MutableLiveData<RandomDrinkResponse>()
+    var drink = MutableLiveData<RandomDrinkResponse>()
+
 
     fun getRandomDrink(){
         viewModelScope.launch {
             try{
                 val request = repository.getRandom()
                 request.onSuccess {
-                    randomDrink.value = it
+                    drink.value = it
                 }
                 request.onFailure {
                     Log.e("RandomDrink", it.localizedMessage!!)
+                }
+            }
+            catch (_: Exception){}
+        }
+    }
+
+    fun getDrink(id: Int){
+        viewModelScope.launch {
+            try{
+                val request = repository.getDrink(id)
+                request.onSuccess {
+                    drink.value = it
                 }
             }
             catch (_: Exception){}

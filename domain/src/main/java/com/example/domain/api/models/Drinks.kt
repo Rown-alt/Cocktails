@@ -3,7 +3,7 @@ package com.example.domain.api.models
 import com.google.gson.annotations.SerializedName
 
 data class Drinks(
-    @SerializedName("idDrink"                     ) var idDrink                     : String? = null,
+    @SerializedName("idDrink"                     ) var idDrink                     : Int? = null,
     @SerializedName("strDrink"                    ) var strDrink                    : String? = null,
     @SerializedName("strDrinkAlternate"           ) var strDrinkAlternate           : String? = null,
     @SerializedName("strTags"                     ) var strTags                     : String? = null,

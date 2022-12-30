@@ -22,7 +22,7 @@ class FirstFragment : Fragment() {
     private var _binding: FragmentFirstBinding? = null
     private val binding get() = _binding!!
     private val filtersAdapter = FilterAdapter()
-    private val viewModel by viewModel<DrinksByFilterViewModel>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,6 @@ class FirstFragment : Fragment() {
     ): View {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         binding.filterAlcohol.adapter = filtersAdapter
-        viewModel.getDrinks("Vodka")
         binding.filterAlcohol.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL)
         return binding.root
 
