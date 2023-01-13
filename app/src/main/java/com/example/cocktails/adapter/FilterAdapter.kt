@@ -42,11 +42,11 @@ class FilterAdapter: RecyclerView.Adapter<FilterAdapter.FilterViewHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")
     fun setFilters(){
-        filters.add(Filter("Tequila", "https://www.svo-dutyfree.ru/medias/23222-527Wx527H?context=bWFzdGVyfGltYWdlc3w2ODQxOXxpbWFnZS9qcGVnfGhiOS9oOTUvOTY3Njg4MDgzODY4Ni8yMzIyMl81MjdXeDUyN0h8MTA4YzlmZTMwOTM0ODc4ZDU5YjFjODQ5ZTI3ZTZiOGFhM2IwMGQxYzEwM2ZlMmFmZTExMzk2ZGUyZmYyMjdmYg&v=1650904520671"))
-        filters.add(Filter("Vodka", "https://wine-shopper.ru/image/cache/catalog/224753%201-600x600.jpg"))
-        filters.add(Filter("Gin", "https://veld21.ru/image/cache/catalog/product/2812-100X6-470x610.jpg"))
-        filters.add(Filter("Whisky", "https://wine-shopper.ru/image/cache/catalog/jopa/23-600x600.jpg"))
-        filters.add(Filter("Rum", "https://dydza6t6xitx6.cloudfront.net/ci-captain-morgan-original-spiced-rum-50b42d45bcd74a31.jpeg"))
+        filters.add(Filter("Tequila", "https://www.thecocktaildb.com/images/ingredients/tequila.png"))
+        filters.add(Filter("Vodka", "https://www.thecocktaildb.com/images/ingredients/vodka.png"))
+        filters.add(Filter("Gin", "https://www.thecocktaildb.com/images/ingredients/gin.png"))
+        filters.add(Filter("Whisky", "https://www.thecocktaildb.com/images/ingredients/whisky.png"))
+        filters.add(Filter("Rum", "https://www.thecocktaildb.com/images/ingredients/rum.png"))
         notifyDataSetChanged()
     }
 }

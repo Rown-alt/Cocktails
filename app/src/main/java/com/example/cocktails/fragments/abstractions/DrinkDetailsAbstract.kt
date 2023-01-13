@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ListAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.bumptech.glide.Glide
@@ -36,6 +37,7 @@ abstract class DrinkDetailsAbstract: Fragment() {
         binding.backPressBtn.setOnClickListener {
             it.findNavController().popBackStack()
         }
+//        binding.ingredientsList
         return binding.root
 
     }

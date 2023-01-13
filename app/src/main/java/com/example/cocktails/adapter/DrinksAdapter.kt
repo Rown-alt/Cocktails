@@ -3,6 +3,7 @@ package com.example.cocktails.adapter
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.marginStart
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -27,6 +28,11 @@ class DrinksAdapter: RecyclerView.Adapter<DrinksAdapter.FilterViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilterViewHolder {
         val view = DrinkItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val width = (parent.width * 0.5).toInt() - 15
+//        val height = ViewGroup.LayoutParams.WRAP_CONTENT - 150
+//
+//        view.root.layoutParams = ViewGroup.LayoutParams(width, height)
+        view.root.minWidth = width
         return  FilterViewHolder(view)
     }
 

@@ -4,15 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".DrinkByFilterFragment">
+    tools:context=".DrinkByFilterFragment"
+    android:background="#ECEDF5">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/drinks"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/drink_item"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-        app:spanCount="2"/>
+        app:spanCount="2"
+        tools:listitem="@layout/drink_item" />
 
 </FrameLayout>
